@@ -1,5 +1,5 @@
 {
-    "name": "mikejw/libs",
+    "name": "mikejw/elibs",
     "type": "library",
     "description": "Miscellaneous library for Empathy PHP Framework",
     "keywords": [
