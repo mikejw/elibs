@@ -1,0 +1,9 @@
+{
+    "name": "mikejw/libs",
+    "type": "library",
+    "description": "Miscellaneous library for Empathy PHP Framework",
+    "keywords": [
+        "lib"
+    ],
+    "homepage": "http://empathyphp.co.uk"
+}
