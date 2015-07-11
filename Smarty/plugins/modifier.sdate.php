@@ -9,6 +9,9 @@
  */
 function smarty_modifier_sdate($string, $format = "r")
 {
+	if ($format == '') {
+		$format = "r";
+	}
     if (!isset($string)) {
         $string = time();
     }
