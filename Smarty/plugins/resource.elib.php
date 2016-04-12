@@ -18,7 +18,7 @@ function smarty_resource_elib_source($tpl_name, &$tpl_source, $smarty)
     
     if ($smarty->tpl_vars['elibtplsub'] != '') {
 
-        echo $filename_sub = $smarty->joined_template_dir.'/'
+        $filename_sub = $smarty->joined_template_dir.'/'
             .$smarty->tpl_vars['elibtplsub'].'/'.$tpl_name;
 
         if (file_exists($filename_sub)) {
