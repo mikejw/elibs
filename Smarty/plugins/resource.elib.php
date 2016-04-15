@@ -72,7 +72,6 @@ function smarty_resource_elib_timestamp($tpl_name, &$tpl_timestamp, $smarty)
     }
 
 
-    $filename = $smarty->joined_template_dir.'/'.$tpl_name;
     if (!file_exists($filename)) {
         if (isset($smarty->tpl_vars['elibtpl_arr'])) {
 
