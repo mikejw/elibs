@@ -16,7 +16,8 @@ function smarty_resource_elib_source($tpl_name, &$tpl_source, $smarty)
     // for Subdomain plugin
     $filename = $smarty->_joined_template_dir.'/'.$tpl_name;
     
-    if ($smarty->tpl_vars['elibtplsub'] != '') {
+    if (isset($smarty->tpl_vars['elibtplsub']) &&
+        $smarty->tpl_vars['elibtplsub'] != '') {
 
         $filename_sub = $smarty->_joined_template_dir.'/'
             .$smarty->tpl_vars['elibtplsub'].'/'.$tpl_name;
@@ -61,7 +62,8 @@ function smarty_resource_elib_timestamp($tpl_name, &$tpl_timestamp, $smarty)
     // for Subdomain plugin
     $filename = $smarty->_joined_template_dir.'/'.$tpl_name;
     
-    if ($smarty->tpl_vars['elibtplsub'] != '') {
+    if (isset($smarty->tpl_vars['elibtplsub']) &&
+        $smarty->tpl_vars['elibtplsub'] != '') {
 
         $filename_sub = $smarty->_joined_template_dir.'/'
             .$smarty->tpl_vars['elibtplsub'].'/'.$tpl_name;
