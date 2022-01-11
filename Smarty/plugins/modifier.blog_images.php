@@ -22,7 +22,10 @@ function smarty_modifier_blog_images($string, $web_root, $public_dir)
         . '/uploads/'
         . $data->size
         . $data->filename
-        . '" alt="" />';
+        . '" alt=""'
+        . ' data-payload="'
+        . $matches[1]
+        . '" />';
     },
     $string
   );
