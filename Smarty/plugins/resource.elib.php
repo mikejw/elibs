@@ -12,21 +12,7 @@
 
 function smarty_resource_elib_source($tpl_name, &$tpl_source, $smarty)
 {
-
-    // for Subdomain plugin
     $filename = $smarty->_joined_template_dir.'/'.$tpl_name;
-    
-    if (isset($smarty->tpl_vars['elibtplsub']) &&
-        $smarty->tpl_vars['elibtplsub'] != '') {
-
-        $filename_sub = $smarty->_joined_template_dir.'/'
-            .$smarty->tpl_vars['elibtplsub'].'/'.$tpl_name;
-
-        if (file_exists($filename_sub)) {
-            $filename = $filename_sub;
-        }
-    }
-
 
     if (!file_exists($filename)) {
         if (isset($smarty->tpl_vars['elibtpl_arr'])) {
@@ -58,21 +44,8 @@ function smarty_resource_elib_source($tpl_name, &$tpl_source, $smarty)
 }
 
 function smarty_resource_elib_timestamp($tpl_name, &$tpl_timestamp, $smarty)
-{  
-    // for Subdomain plugin
+{
     $filename = $smarty->_joined_template_dir.'/'.$tpl_name;
-    
-    if (isset($smarty->tpl_vars['elibtplsub']) &&
-        $smarty->tpl_vars['elibtplsub'] != '') {
-
-        $filename_sub = $smarty->_joined_template_dir.'/'
-            .$smarty->tpl_vars['elibtplsub'].'/'.$tpl_name;
-
-        if (file_exists($filename_sub)) {            
-            $filename = $filename_sub;
-        }
-    }
-
 
     if (!file_exists($filename)) {
         if (isset($smarty->tpl_vars['elibtpl_arr'])) {
